@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1570418A-7327-441E-8F1E-BCFA815A8349}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AvtoService</RootNamespace>
+    <AssemblyName>AvtoService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataForUsing.cs" />
+    <Compile Include="Client\PersonalArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\PersonalArea.Designer.cs">
+      <DependentUpon>PersonalArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs" />
+    <Compile Include="Employee\AddZakazRabota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddZakazRabota.Designer.cs">
+      <DependentUpon>AddZakazRabota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\AddZakazZapchasti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddZakazZapchasti.Designer.cs">
+      <DependentUpon>AddZakazZapchasti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Engineer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Engineer.Designer.cs">
+      <DependentUpon>Engineer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\DeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\DeleteEmployee.Designer.cs">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\AddZapchast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddZapchast.Designer.cs">
+      <DependentUpon>AddZapchast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\LeaderShowSklad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\LeaderShowSklad.Designer.cs">
+      <DependentUpon>LeaderShowSklad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Leader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Leader.Designer.cs">
+      <DependentUpon>Leader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\ClientReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\ClientReg.Designer.cs">
+      <DependentUpon>ClientReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registration\Enter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration\Enter.Designer.cs">
+      <DependentUpon>Enter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NifontovAvtoService.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NifontovAvtoService.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Client\PersonalArea.resx">
+      <DependentUpon>PersonalArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\AddZakazRabota.resx">
+      <DependentUpon>AddZakazRabota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\AddZakazZapchasti.resx">
+      <DependentUpon>AddZakazZapchasti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Engineer.resx">
+      <DependentUpon>Engineer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\DeleteEmployee.resx">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\AddZapchast.resx">
+      <DependentUpon>AddZapchast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\LeaderShowSklad.resx">
+      <DependentUpon>LeaderShowSklad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Leader.resx">
+      <DependentUpon>Leader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\ClientReg.resx">
+      <DependentUpon>ClientReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration\Enter.resx">
+      <DependentUpon>Enter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="NifontovAvtoService.xsc">
+      <DependentUpon>NifontovAvtoService.xsd</DependentUpon>
+    </None>
+    <None Include="NifontovAvtoService.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NifontovAvtoService.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NifontovAvtoService.xss">
+      <DependentUpon>NifontovAvtoService.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
